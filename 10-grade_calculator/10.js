@@ -3,13 +3,13 @@
 */
 
 function checkLetterGrade() {
-    const input = Number(document.getElementById("input").value);
+    const input = document.getElementById("input").value;
     let grade = "";
-    if (!Number.isFinite(input) || input == "") {
+    if (!Number.isFinite(Number(input)) || input == "") {
         return alert("Invalid input! Must be a number!");
     };
-    if (input < 1 || input > 100) {
-        return alert("Invalid input! Must be within the range 1-100.");
+    if (input < 0 || input > 100) {
+        return alert("Invalid input! Must be within the range 0-100.");
     };
     if (input > 89) {
         grade = "A";

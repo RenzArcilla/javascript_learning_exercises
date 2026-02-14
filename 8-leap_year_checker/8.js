@@ -4,9 +4,9 @@
 */
 
 function checkIfLeapYear() {
-    const input = Number(document.getElementById("input").value);
+    const input = document.getElementById("input").value;
     let isLeapYear = 0;
-    if (!Number.isFinite(input) || input == "") return alert("Invalid input! Must be a number.");
+    if (!Number.isFinite(Number(input)) || input == "") return alert("Invalid input! Must be a number.");
     if (input % 4 == 0) {
         isLeapYear = 1;
         if (input % 100 == 0) {

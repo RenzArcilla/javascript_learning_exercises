@@ -3,9 +3,9 @@
 */
 
 function checkGreater() {
-    const input1 = Number(document.getElementById("input1").value);
-    const input2 = Number(document.getElementById("input2").value);
-    if (!Number.isFinite(input1) || !Number.isFinite(input2) || input1 == "" || input2 == "") {
+    const input1 = document.getElementById("input1").value;
+    const input2 = document.getElementById("input2").value;
+    if (!Number.isFinite(Number(input1)) || !Number.isFinite(Number(input2)) || input1 == "" || input2 == "") {
         return alert("Invalid input! Both input must be a number.");
     };
     if (input1 > input2) {
